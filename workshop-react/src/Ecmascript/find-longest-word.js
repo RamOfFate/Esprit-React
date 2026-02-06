@@ -9,7 +9,7 @@ const findLongestword = (arr) => {
   }));
 
   return wordObj.reduce((max, current) =>
-    current.longeur > max.longeur ? current : max,
+    current.longeur > max.longeur ? current : max, 
   );
 };
 
