@@ -1,7 +1,7 @@
 import { NavLink } from "react-router";
 
 export default function Sidebar() {
-  let projects: string[] = ["counter", "whos-stupid"];
+  let projects: string[] = ["counter", "whos-stupid", "categories"];
 
   return (
     <div className="w-70 h-full rounded-4xl text-center select-none text-blue-950">

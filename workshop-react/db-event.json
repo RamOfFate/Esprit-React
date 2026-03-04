@@ -1,0 +1,52 @@
+[
+  {
+    "name": "High Fantasy",
+    "description": "Epic tales set in entirely fictional worlds, often involving magic, mythical creatures, and the struggle between good and evil.",
+    "color": "#4B0082"
+  },
+  {
+    "name": "Hard Science Fiction",
+    "description": "Stories characterized by an emphasis on scientific accuracy and technical detail, exploring the future of technology and space.",
+    "color": "#2F4F4F"
+  },
+  {
+    "name": "Gothic Horror",
+    "description": "A blend of fear and romance, featuring atmospheric settings like haunted mansions, ancestral curses, and psychological suspense.",
+    "color": "#1A1A1A"
+  },
+  {
+    "name": "Historical Fiction",
+    "description": "Narratives set in the past that capture the spirit, manners, and social conditions of a specific historical period.",
+    "color": "#8B4513"
+  },
+  {
+    "name": "Cyberpunk",
+    "description": "A subgenre of sci-fi featuring advanced technology contrasted with a breakdown or radical change in the social order.",
+    "color": "#00FF41"
+  },
+  {
+    "name": "Contemporary Romance",
+    "description": "Modern love stories focusing on the emotional growth of the characters and the development of their romantic relationship.",
+    "color": "#E91E63"
+  },
+  {
+    "name": "Noir Mystery",
+    "description": "Gritty, cynical crime fiction marked by fatalism, moral ambiguity, and hard-boiled detectives.",
+    "color": "#36454F"
+  },
+  {
+    "name": "Magical Realism",
+    "description": "Stories where magic or supernatural elements are woven into an otherwise mundane, realistic environment.",
+    "color": "#708090"
+  },
+  {
+    "name": "Biographies & Memoirs",
+    "description": "Non-fiction accounts of a person's life, offering insights into their experiences, challenges, and legacies.",
+    "color": "#4682B4"
+  },
+  {
+    "name": "Utopian/Dystopian",
+    "description": "Explorations of social and political structures, often warning of the consequences of current societal trends.",
+    "color": "#FF4500"
+  }
+]
