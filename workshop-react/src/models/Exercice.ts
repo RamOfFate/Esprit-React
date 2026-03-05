@@ -5,6 +5,7 @@ import {
   Notebook,
   Palette,
   Route,
+  TextSearch,
   Ticket,
   type LucideIcon,
 } from "lucide-react";
@@ -17,6 +18,7 @@ import GestionnaireNotes from "@/pages/atelier1/GestionnaireNotes";
 import TodoPrio from "@/pages/atelier1/TodoPrio";
 import Events from "@/pages/atelier2-partie1/Events";
 import Events2 from "@/pages/atelier2-partie2/Events2";
+import Events3 from "@/pages/atelier3/Events3";
 
 export interface Exercise {
   id: string;
@@ -72,7 +74,7 @@ export const EXERCISES: Exercise[] = [
     id: "cf1",
     title: "Event manager",
     description: 'Utiliser des composants fonctionnels',
-    path: "/composants-fonctionnels/ex1",
+    path: "/composants-fonctionnels/ex6",
     icon: Ticket,
     component: Events,
   },
@@ -80,8 +82,16 @@ export const EXERCISES: Exercise[] = [
     id: "cf2",
     title: "Event manager - 2",
     description: 'Appliquer le routage à notre application React',
-    path: "/composants-fonctionnels-routage/ex2",
+    path: "/composants-fonctionnels-routage/ex7",
     icon: Route,
     component: Events2,
+  },
+  {
+    id: "a1",
+    title: "Event manager - 3",
+    description: 'Consommer des services web en utilisant json-server et le client HTTP Axios.',
+    path: "/axios/ex1",
+    icon: TextSearch,
+    component: Events3,
   },
 ];

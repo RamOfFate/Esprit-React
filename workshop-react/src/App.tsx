@@ -7,6 +7,9 @@ import { EXERCISES } from "./models/Exercice";
 import { ThemeProvider } from "./components/theme-provider";
 import NotFound from "./pages/NotFound";
 import EventDetails from "./pages/atelier2-partie2/EventDetails";
+import EventDetailsAxios from "./pages/atelier3/EventDetailsAxios";
+import AddEvent from "./pages/atelier3/AddEvent";
+import UpdateEvent from "./pages/atelier3/UpdateEvent";
 
 function Layout() {
   return (
@@ -48,6 +51,9 @@ export function App() {
               path="/composants-fonctionnels-routage/ex2/:eventName"
               element={<EventDetails />}
             ></Route>
+            <Route path="/axios/ex1/:eventName" element={<EventDetailsAxios />}></Route>
+            <Route path="/axios/ex1/add" element={<AddEvent />}></Route>
+            <Route path="/axios/ex1/edit/:id" element={<UpdateEvent />}></Route>
             <Route path="*" element={<NotFound />} />
           </Route>
           <Route path="*" element={<NotFound />} />
