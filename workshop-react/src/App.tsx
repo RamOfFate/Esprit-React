@@ -1,30 +1,59 @@
-import { Route, Routes } from "react-router";
-import "./App.css";
-import Counter from "./components/counter";
-import Home from "./layout/home";
-import NotFound from "./layout/not-found";
-import WhosStupid from "./components/whos-stupid";
-import Category from "./components/category";
+import { BrowserRouter, Outlet, Route, Routes } from "react-router-dom";
+import Dashboard from "./pages/Dashboard";
+import { SidebarProvider, SidebarTrigger } from "./components/ui/sidebar";
+import { AppSidebar } from "./pages/AppSidebar";
+import { TooltipProvider } from "./components/ui/tooltip";
+import { EXERCISES } from "./models/Exercice";
+import { ThemeProvider } from "./components/theme-provider";
+import NotFound from "./pages/NotFound";
+import EventDetails from "./pages/atelier2-partie2/EventDetails";
 
-function App() {
+function Layout() {
   return (
-    <Routes>
-      <Route path="/" element={<Home />}>
-        <Route
-          path="counter"
-          element={
-            <Counter
-              initialCount={0}
-              initialNegativeStep={1}
-              initialPositiveStep={1}
-            />
-          }
-        />
-        <Route path="/whos-stupid" element={<WhosStupid />}></Route>
-        <Route path="/categories" element={<Category />}></Route>
-        <Route path="*" element={<NotFound />}></Route>
-      </Route>
-    </Routes>
+    <SidebarProvider>
+      <TooltipProvider>
+        <div className="flex min-h-screen w-full font-mono bg-background">
+          <AppSidebar />
+          <main className="flex-1 flex flex-col">
+            <header className="flex h-16 items-center border-b px-6 gap-4">
+              <SidebarTrigger />
+              <div className="h-4 w-px bg-border" />
+              <span className="text-sm font-medium text-muted-foreground">
+                Tarek Msolli
+              </span>
+            </header>
+
+            <div className="p-6 flex-1">
+              <Outlet />
+            </div>
+          </main>
+        </div>
+      </TooltipProvider>
+    </SidebarProvider>
+  );
+}
+
+export function App() {
+  return (
+    <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+      <BrowserRouter>
+        <Routes>
+          <Route element={<Layout />}>
+            <Route path="/" element={<Dashboard />} />
+
+            {EXERCISES.map((ex) => (
+              <Route key={ex.id} path={ex.path} element={<ex.component />} />
+            ))}
+            <Route
+              path="/composants-fonctionnels-routage/ex2/:eventName"
+              element={<EventDetails />}
+            ></Route>
+            <Route path="*" element={<NotFound />} />
+          </Route>
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </BrowserRouter>
+    </ThemeProvider>
   );
 }
 
