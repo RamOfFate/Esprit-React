@@ -9,6 +9,11 @@ export default function EventDetails() {
   const { eventName } = useParams();
   
   const event = EVENTS_DATA.find(e => e.name === decodeURIComponent(eventName || ""));
+
+if (!event) {
+    return <p>There was a problem fetching events</p>
+  }
+
   const [isLiked, setIsLiked] = useState(event?.like);
     const [participants, setParticipants] = useState(event?.nbParticipants);
     const [tickets, setTickets] = useState(event?.nbTickets);
@@ -18,6 +23,8 @@ export default function EventDetails() {
       setParticipants((prev) => prev + 1);
     }
   };
+
+
 
   return (
     

@@ -18,7 +18,7 @@ export default function ListManager({
     }
   };
 
-  const deleteItem = (itemToDelete) => {
+  const deleteItem = (itemToDelete: string) => {
     setListe(liste.filter((item) => item !== itemToDelete));
   };
 
